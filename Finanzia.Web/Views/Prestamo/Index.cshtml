@@ -1,0 +1,174 @@
+﻿@section Estilos {
+    <link href="~/lib/datatables2/css/datatables.datatables.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-shade);
+            color: var(--dark-shade);
+        }
+
+        :root {
+            --aztec-glimmer: #E6B347;
+            --light-shade: #FFF8E1;
+            --dark-shade: #8C5E21;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: var(--aztec-glimmer);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            font-weight: 600;
+        }
+
+        .btn {
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .btn-success {
+            background-color: var(--aztec-glimmer);
+            border-color: var(--aztec-glimmer);
+        }
+
+            .btn-success:hover {
+                background-color: #D4A238;
+                border-color: #D4A238;
+            }
+
+        .table thead th {
+            background-color: var(--aztec-glimmer);
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: var(--light-shade);
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            background-color: var(--aztec-glimmer);
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .modal-footer {
+            background-color: var(--light-shade);
+        }
+    </style>
+}
+
+<div class="container-fluid mt-5">
+    <div class="card">
+        <div class="card-header d-flex align-items-center">
+            <i class="fa-solid fa-dollar-sign me-2"></i>
+            <h5 class="mb-0">Lista de Préstamos</h5>
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-start mb-3">
+                <a class="btn btn-success" asp-controller="Prestamo" asp-action="Nuevo">
+                    <i class="fa-solid fa-plus"></i> Nuevo Préstamo
+                </a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="tbData" cellspacing="0" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nro. Préstamo</th>
+                            <th>Cliente</th>
+                            <th>Monto Préstamo</th>
+                            <th>Monto Interés</th>
+                            <th>Monto Total</th>
+                            <th>Tipo Moneda</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Detalle -->
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="txtIdPrestamo"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtMontoPrestamo" placeholder="Monto Prestamo" disabled>
+                            <label for="txtMontoPrestamo">Monto Prestamo:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtInteres" placeholder="Interes %" disabled>
+                            <label for="txtInteres">Interes %:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtNroCuotas" placeholder="Nro. Cuotas" disabled>
+                            <label for="txtNroCuotas">Nro. Cuotas:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtFormaPago" placeholder="Forma de Pago" disabled>
+                            <label for="txtFormaPago">Forma de Pago:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtTipoMoneda" placeholder="Tipo Moneda" disabled>
+                            <label for="txtTipoMoneda">Tipo Moneda:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtMontoTotal" placeholder="Monto Total" disabled>
+                            <label for="txtMontoTotal">Monto Total:</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-sm-12">
+                        <table class="table table-striped" id="tbDetalle">
+                            <thead>
+                                <tr>
+                                    <th>Nro. Cuota</th>
+                                    <th>Fecha de Pago</th>
+                                    <th>Monto</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-primary" id="btnImprimir">Imprimir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datatables2/js/moment.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/views/prestamo.js"></script>
+}

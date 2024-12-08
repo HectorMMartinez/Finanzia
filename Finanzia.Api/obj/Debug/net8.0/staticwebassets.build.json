@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZxTk5Mvop45sWzN097GtJQy3hNoI1Tfg0DBdFlf5dhw=",
+  "Source": "Finanzia.Api",
+  "BasePath": "_content/Finanzia.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

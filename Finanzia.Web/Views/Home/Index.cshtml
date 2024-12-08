@@ -1,0 +1,200 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Estilos {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFF8E1;
+            color: #8C5E21;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .card .card-body {
+                font-weight: 500;
+            }
+
+        .bg-primary {
+            background-color: #E6B347 !important;
+        }
+
+        .bg-danger {
+            background-color: #D9534F !important;
+        }
+
+        .bg-success {
+            background-color: #5CB85C !important;
+        }
+
+        .bg-warning {
+            background-color: #F0AD4E !important;
+        }
+
+        .card .fa-2xl {
+            font-size: 2.5rem;
+        }
+
+        .chart-container {
+            margin-top: 30px;
+        }
+
+        canvas {
+            max-height: 350px;
+            height: auto;
+        }
+
+        .table-container {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+}
+
+<h1 class="mt-4 text-center">Resumen</h1>
+
+<!-- Cards de Resumen -->
+<div class="row g-4 mt-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div>Total Clientes</div>
+                        <div class="fw-bold display-6"><span id="spTotalClientes">0</span></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-user-group fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div>Préstamos Activos</div>
+                        <div class="fw-bold display-6"><span id="spPrestamosPendientes">0</span></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-hourglass-half fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div>Préstamos Finalizados</div>
+                        <div class="fw-bold display-6"><span id="spPrestamosCancelados">0</span></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-money-check-dollar fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div>Interés Acumulado</div>
+                        <div class="fw-bold display-6"><span id="spInteresAcumulado">0</span></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-money-bill-trend-up fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gráficos -->
+<div class="row chart-container mt-4">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">Distribución de Préstamos</div>
+            <div class="card-body">
+                <canvas id="chartPrestamos" style="height: 350px;"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">Ingresos por Mes</div>
+            <div class="card-body">
+                <canvas id="chartIngresos" style="height: 350px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tablas de pagos -->
+<div class="row table-container">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">Pagos Próximos (15 días)</div>
+            <div class="card-body">
+                <table class="table table-striped" id="tablaPagosProximos">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                            <th>Cuota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas generadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">Pagos Atrasados (+7 días)</div>
+            <div class="card-body">
+                <table class="table table-striped" id="tablaPagosAtrasados">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                            <th>Cuota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas generadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/views/home.js"></script>
+}

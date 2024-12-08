@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Sistema de gestión de préstamos" />
+    <meta name="author" content="Finanzia" />
+    <title>Login - Finanzia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilo global */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFF8E1; /* Fondo claro */
+            color: #8C5E21; /* Texto oscuro */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0; /* Eliminamos márgenes del body */
+        }
+
+        #layoutAuthentication {
+            flex: 1; /* Ocupa todo el espacio disponible entre el header y el footer */
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1; /* Hace que el contenido ocupe el espacio restante */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px; /* Ancho máximo de la tarjeta aumentado */
+            width: 100%;
+            padding: 20px; /* Agregado padding interno */
+        }
+
+        .card-header {
+            background-color: #E6B347; /* Color principal */
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            font-size: 2rem; /* Tamaño del texto aumentado */
+        }
+
+        .btn-primary {
+            background-color: #E6B347;
+            border-color: #E6B347;
+            font-size: 1.1rem; /* Botón más grande */
+            padding: 10px 0; /* Más espacio en el botón */
+        }
+
+            .btn-primary:hover {
+                background-color: #D4A238;
+                border-color: #D4A238;
+            }
+
+        .welcome-message {
+            font-size: 1.2rem; /* Texto de bienvenida más grande */
+            color: #8C5E21;
+            text-align: center;
+            margin-top: -5px;
+        }
+
+        footer {
+            background-color: #FAF3E3;
+            color: #8C5E21;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="layoutAuthentication">
+        <main>
+            <div class="card shadow-lg border-0">
+                <div class="card-header">
+                    Finanzia
+                    <p class="welcome-message">Gestión de préstamos hecha fácil y segura</p>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Login" asp-action="Index" method="post">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="email" placeholder="Correo electrónico" name="correo" required />
+                            <label for="inputEmail">Correo</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="password" placeholder="Contraseña" name="clave" required />
+                            <label for="inputPassword">Contraseña</label>
+                        </div>
+                        @if (ViewData["Mensaje"] != null)
+                        {
+                            <div class="form-group">
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Mensaje"]
+                                </div>
+                            </div>
+                        }
+                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <div class="small text-muted">¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-center">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Finanzia 2023</div>
+                    <div>
+                        <a href="#">Política de privacidad</a>
+                        &middot;
+                        <a href="#">Términos y condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/scripts.js"></script>
+</body>
+</html>
+
+
