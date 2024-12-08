@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C2gdKzF+eiHBmhWh6tusjnH8DX9V2YudiPydcmAuZajfBWZh1hLIA2vt3dYENZ/2Lif5aIb/FAskrMxQG7dMcg==",
+  "dgSpecHash": "tU42DFjBuY4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hevto\\Downloads\\Finanzia\\Finanzia\\Finanzia.Web\\Finanzia.Web.csproj",
+  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Web\\Finanzia.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hevto\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\harfbuzzsharp\\7.3.0.1\\harfbuzzsharp.7.3.0.1.nupkg.sha512",
