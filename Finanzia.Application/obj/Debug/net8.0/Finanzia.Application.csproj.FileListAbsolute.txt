@@ -13,3 +13,22 @@ C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Application\obj\Debug\net8.0
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Application\obj\Debug\net8.0\refint\Finanzia.Application.dll
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.pdb
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Application\obj\Debug\net8.0\ref\Finanzia.Application.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\Finanzia.Application.deps.json
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\Finanzia.Application.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\Finanzia.Application.pdb
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\Finanzia.Domain.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\bin\Debug\net8.0\Finanzia.Domain.pdb
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.csproj.AssemblyReference.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.AssemblyInfoInputs.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.AssemblyInfo.cs
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.csproj.CoreCompileInputs.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.sourcelink.json
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.csproj.CopyComplete
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\refint\Finanzia.Application.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\Finanzia.Application.pdb
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Application\obj\Debug\net8.0\ref\Finanzia.Application.dll

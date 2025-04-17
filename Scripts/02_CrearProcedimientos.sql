@@ -45,7 +45,7 @@ go
 create procedure sp_listaMoneda
 as
 begin
-	select IdMoneda,Nombre,Simbolo,convert(char(10),FechaCreacion,103)[FechaCreacion] from Moneda
+	select IdMoneda,Nombre,Simbolo,convert(char(10),FechaCreacion,103)AS FechaCreacion from Moneda
 end
 
 go
@@ -381,18 +381,57 @@ end
 -- PROCEDIMIENTO PARA RESUMEN
 
 GO
-create PROCEDURE sp_obtenerResumen
-as
-begin
-SELECT 
-  (SELECT COUNT(*) FROM Prestamo WHERE Estado = 'Activo') AS TotalPrestamosActivos,
-  (SELECT SUM(MontoPrestamo) FROM Prestamo WHERE Estado = 'Activo') AS MontoTotalPrestado,
-  (SELECT COUNT(*) FROM Pagos WHERE Estado = 'Realizado') AS TotalPagosRecibidos,
-  (SELECT SUM(Monto) FROM Pagos WHERE Estado = 'Realizado') AS TotalMontoPagosRecibidos,
-  (SELECT COUNT(*) FROM Prestamo WHERE Estado = 'Pendiente') AS PrestamosPendientes,
-  (SELECT SUM(ValorPorCuota - Pagado) FROM Prestamo WHERE Estado = 'Pendiente') AS TotalMontoPendiente,
-  (SELECT AVG(InteresPorcentaje) FROM Prestamo) AS TasaInteresesPromedio,
-  (SELECT COUNT(*) FROM Cliente WHERE EXISTS (SELECT 1 FROM Prestamo WHERE Prestamo.IdCliente = Cliente.IdCliente AND Estado = 'Activo')) AS ClientesActivos
-end
+CREATE PROCEDURE sp_obtenerResumen
+AS
+BEGIN
+    -- 1. Resumen general
+    SELECT 
+        (SELECT COUNT(*) FROM Cliente) AS TotalClientes,
+        (SELECT COUNT(*) FROM Prestamo WHERE Estado = 'Pendiente') AS PrestamosPendientes,
+        (SELECT COUNT(*) FROM Prestamo WHERE Estado = 'Cancelado') AS PrestamosCancelados,
+        (SELECT SUM(MontoPrestamo * InteresPorcentaje / 100.0) FROM Prestamo WHERE Estado = 'Pendiente') AS InteresAcumulado,
+        (SELECT SUM(MontoPrestamo) FROM Prestamo WHERE Estado = 'Pendiente') AS MontoTotalPrestado,
+        (SELECT COUNT(*) FROM PrestamoDetalle WHERE Estado = 'Cancelado') AS TotalPagosRecibidos,
+        (SELECT AVG(InteresPorcentaje) FROM Prestamo) AS TasaInteresesPromedio,
+        (SELECT COUNT(*) FROM Cliente 
+         WHERE EXISTS (
+             SELECT 1 FROM Prestamo 
+             WHERE Prestamo.IdCliente = Cliente.IdCliente 
+             AND Estado = 'Pendiente'
+         )) AS ClientesActivos;
 
-GO
+    -- 2. Ingresos por mes
+    SELECT 
+        FORMAT(FechaPagado, 'MMMM yyyy', 'es-ES') AS Mes,
+        SUM(MontoCuota) AS Ingreso
+    FROM PrestamoDetalle
+    WHERE Estado = 'Cancelado' AND FechaPagado IS NOT NULL
+    GROUP BY FORMAT(FechaPagado, 'MMMM yyyy', 'es-ES')
+    ORDER BY MIN(FechaPagado);
+
+    -- 3. Pagos próximos
+    SELECT 
+        pd.IdPrestamoDetalle,
+        pd.FechaPago,
+        pd.MontoCuota,
+        c.Nombre + ' ' + c.Apellido AS Cliente,
+        'Cuota #' + CAST(pd.NroCuota AS VARCHAR) AS Cuota
+    FROM PrestamoDetalle pd
+    INNER JOIN Prestamo p ON p.IdPrestamo = pd.IdPrestamo
+    INNER JOIN Cliente c ON c.IdCliente = p.IdCliente
+    WHERE pd.Estado = 'Pendiente' AND pd.FechaPago > GETDATE()
+    ORDER BY pd.FechaPago ASC;
+
+    -- 4. Pagos atrasados
+    SELECT 
+        pd.IdPrestamoDetalle,
+        pd.FechaPago,
+        pd.MontoCuota,
+        c.Nombre + ' ' + c.Apellido AS Cliente,
+        'Cuota #' + CAST(pd.NroCuota AS VARCHAR) AS Cuota
+    FROM PrestamoDetalle pd
+    INNER JOIN Prestamo p ON p.IdPrestamo = pd.IdPrestamo
+    INNER JOIN Cliente c ON c.IdCliente = p.IdCliente
+    WHERE pd.Estado = 'Pendiente' AND pd.FechaPago <= GETDATE()
+    ORDER BY pd.FechaPago ASC;
+END

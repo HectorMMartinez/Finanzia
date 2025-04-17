@@ -79,7 +79,6 @@ FechaCreacion datetime default getdate()
 )
 
 go
-
 create table Usuario(
 IdUsuario int primary key identity,
 NombreCompleto varchar(50),
@@ -89,13 +88,6 @@ FechaCreacion datetime default getdate()
 )
 
 go
-
-insert into Moneda(Nombre,Simbolo) values
-('Soles','S/.'),
-('Dolares','$')
-
-go
-
 insert into Usuario(NombreCompleto,Correo,Clave) values
 ('Administrador','Admin@gmail.com','12345')
 

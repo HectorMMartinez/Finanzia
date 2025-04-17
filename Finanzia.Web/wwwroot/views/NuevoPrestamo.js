@@ -1,8 +1,8 @@
 ﻿let idCliente = 0;
 const confirmaRegistro = "¡Préstamo registrado exitosamente!";
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Cargar lista de monedas
+// Cargar lista de monedas
+$(document).ready(function () {
     $.LoadingOverlay("show");
     fetch(`https://localhost:7291/api/Moneda/Lista`, {
         method: "GET",
@@ -21,56 +21,32 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(() => {
             $.LoadingOverlay("hide");
-            Swal.fire({
-                title: "Error!",
-                text: "No se pudo cargar la lista de monedas.",
-                icon: "warning"
-            });
+            Swal.fire("Error!", "No se pudo cargar la lista de monedas.", "warning");
         });
 });
 
-// Validar campos
+// Validar cliente
 function validarCliente(nroDocumento, nombre, apellido, correo, telefono) {
-    const docRegex = /^[0-9]{3}-[0-9]{7}-[0-9]{1}$/; // Formato dominicano
-    const telRegex = /^[+]?1?[ -]?[0-9]{3}[ -]?[0-9]{3}[ -]?[0-9]{4}$/; // Teléfono dominicano
+    const docRegex = /^[0-9]{3}-[0-9]{7}-[0-9]{1}$/;
+    const telRegex = /^[+]?1?[ -]?[0-9]{3}[ -]?[0-9]{3}[ -]?[0-9]{4}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!nroDocumento || !docRegex.test(nroDocumento)) {
-        Swal.fire({
-            title: "Error!",
-            text: "El número de documento no tiene un formato válido.",
-            icon: "warning"
-        });
+        Swal.fire("Error!", "El número de documento no tiene un formato válido.", "warning");
         return false;
     }
-
     if (!nombre || !apellido) {
-        Swal.fire({
-            title: "Error!",
-            text: "El nombre y apellido son obligatorios.",
-            icon: "warning"
-        });
+        Swal.fire("Error!", "El nombre y apellido son obligatorios.", "warning");
         return false;
     }
-
     if (!correo || !emailRegex.test(correo)) {
-        Swal.fire({
-            title: "Error!",
-            text: "El correo no tiene un formato válido.",
-            icon: "warning"
-        });
+        Swal.fire("Error!", "El correo no tiene un formato válido.", "warning");
         return false;
     }
-
     if (!telefono || !telRegex.test(telefono)) {
-        Swal.fire({
-            title: "Error!",
-            text: "El teléfono no tiene un formato válido.",
-            icon: "warning"
-        });
+        Swal.fire("Error!", "El teléfono no tiene un formato válido.", "warning");
         return false;
     }
-
     return true;
 }
 
@@ -146,7 +122,6 @@ $("#btnGuardarCliente").on("click", function () {
             Swal.fire("Error!", "No se pudo registrar el cliente.", "error");
         });
 });
-
 // Calcular préstamo
 $("#btnCalcular").on("click", function () {
     const montoPrestamo = parseFloat($("#txtMontoPrestamo").val());
@@ -167,3 +142,93 @@ $("#btnCalcular").on("click", function () {
     $("#txtMontoTotal").val(montoTotal.toFixed(2));
 });
 
+// Registrar préstamo
+$("#btnRegistrar").on("click", function () {
+    const montoPrestamo = parseFloat($("#txtMontoPrestamo").val());
+    const interes = parseFloat($("#txtInteres").val());
+    const nroCuotas = parseInt($("#txtNroCuotas").val());
+    const formaPago = $("#cboFormaPago").val();
+    const idMoneda = parseInt($("#cboTipoMoneda").val());
+    const fechaInicio = $("#txtFechaInicio").val();
+
+    const valorInteres = parseFloat($("#txtMontoInteres").val());
+    const valorPorCuota = parseFloat($("#txtMontoPorCuota").val());
+    const valorTotal = parseFloat($("#txtMontoTotal").val());
+
+    if (!idCliente || !montoPrestamo || !interes || !nroCuotas || !formaPago || !idMoneda || !fechaInicio) {
+        Swal.fire("Error!", "Todos los campos deben estar completos para registrar el préstamo.", "warning");
+        return;
+    }
+
+    if (isNaN(valorInteres) || isNaN(valorPorCuota) || isNaN(valorTotal)) {
+        Swal.fire("Error!", "Debe presionar el botón Calcular antes de registrar el préstamo.", "warning");
+        return;
+    }
+
+    const fechaInicioISO = new Date(fechaInicio).toISOString();
+    const fechaCreacion = new Date().toISOString();
+
+    const cliente = {
+        idCliente: idCliente,
+        nroDocumento: $("#txtNroDocumento").val().trim(),
+        nombre: $("#txtNombre").val().trim(),
+        apellido: $("#txtApellido").val().trim(),
+        correo: $("#txtCorreo").val().trim(),
+        telefono: $("#txtTelefono").val().trim(),
+        fechaCreacion: fechaCreacion
+    };
+
+    const monedaSelect = $("#cboTipoMoneda option:selected");
+    const moneda = {
+        idMoneda: idMoneda,
+        nombre: monedaSelect.text().trim(),
+        simbolo: monedaSelect.data("simbolo") || "$",
+        fechaCreacion: fechaCreacion
+    };
+
+    const prestamo = {
+        cliente: cliente,
+        moneda: moneda,
+        fechaInicioPago: fechaInicioISO,
+        montoPrestamo: montoPrestamo,
+        interesPorcentaje: interes,
+        nroCuotas: nroCuotas,
+        formaDePago: formaPago,
+        valorPorCuota: valorPorCuota,
+        valorInteres: valorInteres,
+        valorTotal: valorTotal,
+        estado: "Pendiente",
+        fechaCreacion: fechaCreacion,
+        prestamoDetalle: []
+    };
+
+    fetch(`https://localhost:7291/api/Prestamo/Crear`, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json;charset=utf-8' },
+        body: JSON.stringify(prestamo)
+    })
+        .then(async response => {
+            const contentType = response.headers.get("Content-Type");
+            const isJson = contentType && contentType.includes("application/json");
+            const data = isJson ? await response.json() : await response.text();
+
+            if (response.ok) {
+                Swal.fire("Éxito!", confirmaRegistro, "success");
+                setTimeout(() => window.location.href = "/Prestamo", 2000);
+            } else {
+                let errorMsg = "Error al registrar el préstamo.";
+                if (typeof data === "string") {
+                    errorMsg = data;
+                } else if (data.message) {
+                    errorMsg = data.message;
+                } else if (data.data) {
+                    errorMsg = data.data;
+                }
+                Swal.fire("Error!", errorMsg, "error");
+            }
+        })
+        .catch(error => {
+            console.error("Error en el fetch:", error);
+            Swal.fire("Error!", "No se pudo comunicar con el servidor.", "error");
+        });
+});

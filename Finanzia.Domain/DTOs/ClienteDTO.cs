@@ -23,7 +23,7 @@ namespace Finanzia.Domain.DTOs
         public string? Correo { get; set; }
 
         [Required(ErrorMessage = "El teléfono es obligatorio.")]
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "El teléfono debe tener 10 dígitos.")]
+        [RegularExpression(@"^\d{3}-\d{3}-\d{4}$", ErrorMessage = "El teléfono debe seguir el formato 000-000-0000.")]
         public string? Telefono { get; set; }
 
         public DateTime FechaCreacion { get; set; }

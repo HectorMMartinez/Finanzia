@@ -214,6 +214,28 @@
           }
         }
       },
+      "Selenium.WebDriver/4.31.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Selenium.WebDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/135.0.7049.9500": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
       "SkiaSharp/2.88.7": {
         "type": "package",
         "dependencies": {
@@ -658,6 +680,52 @@
         "questpdf.nuspec"
       ]
     },
+    "Selenium.WebDriver/4.31.0": {
+      "sha512": "RT5Pg6UVyxe/+S/H808VAbfXX4kHQdvo/U28oViwUcCpC4WL7zHq2GgxY/b9zNLTcwJ8zfqu+WmHPifkTx+BCQ==",
+      "type": "package",
+      "path": "selenium.webdriver/4.31.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Selenium.WebDriver.targets",
+        "buildTransitive/Selenium.WebDriver.targets",
+        "icon.png",
+        "lib/net8.0/WebDriver.dll",
+        "lib/net8.0/WebDriver.xml",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "manager/linux/selenium-manager",
+        "manager/macos/selenium-manager",
+        "manager/windows/selenium-manager.exe",
+        "selenium.webdriver.4.31.0.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/135.0.7049.9500": {
+      "sha512": "MxJ4s+rpsmiDwXkha1ZtMIDfNzzHltpNKvt2vfEkva9pZNOJfy1zRIIVFn59YA59G00/TaNiZpkBw1crlOfhBg==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/135.0.7049.9500",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/LICENSE.chromedriver",
+        "driver/linux64/chromedriver",
+        "driver/mac64/LICENSE.chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/mac64arm/LICENSE.chromedriver",
+        "driver/mac64arm/chromedriver",
+        "driver/win32/LICENSE.chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.135.0.7049.9500.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
     "SkiaSharp/2.88.7": {
       "sha512": "LJHAMrbWO00J7jXWLWehyjqFo29T4VzABimfJb4nICqpEe3c/KvQGWL4ItON8ymzhxYOeFgyxeRzuNzO4GHSug==",
       "type": "package",
@@ -839,7 +907,9 @@
       "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "QuestPDF >= 2023.12.6"
+      "QuestPDF >= 2023.12.6",
+      "Selenium.WebDriver >= 4.31.0",
+      "Selenium.WebDriver.ChromeDriver >= 135.0.7049.9500"
     ]
   },
   "packageFolders": {
@@ -849,11 +919,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj",
       "projectName": "Finanzia.Domain",
-      "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj",
+      "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj",
       "packagesPath": "C:\\Users\\hevto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\obj\\",
+      "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -881,11 +951,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -907,6 +972,14 @@
           "QuestPDF": {
             "target": "Package",
             "version": "[2023.12.6, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.31.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[135.0.7049.9500, )"
           }
         },
         "imports": [
@@ -925,7 +998,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

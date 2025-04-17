@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Api\\Finanzia.Api.csproj": {}
+    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Api\\Finanzia.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Api\\Finanzia.Api.csproj": {
+    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Api\\Finanzia.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Api\\Finanzia.Api.csproj",
+        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Api\\Finanzia.Api.csproj",
         "projectName": "Finanzia.Api",
-        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Api\\Finanzia.Api.csproj",
+        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Api\\Finanzia.Api.csproj",
         "packagesPath": "C:\\Users\\hevto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Api\\obj\\",
+        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\Finanzia.Application.csproj": {
-                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\Finanzia.Application.csproj"
+              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\Finanzia.Application.csproj": {
+                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\Finanzia.Application.csproj"
               },
-              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj": {
-                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj"
+              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj": {
+                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj"
               }
             }
           }
@@ -46,11 +46,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,6 +67,14 @@
             "QuestPDF": {
               "target": "Package",
               "version": "[2023.12.6, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.31.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[135.0.7049.9500, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -97,18 +100,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\Finanzia.Application.csproj": {
+    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\Finanzia.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\Finanzia.Application.csproj",
+        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\Finanzia.Application.csproj",
         "projectName": "Finanzia.Application",
-        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\Finanzia.Application.csproj",
+        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\Finanzia.Application.csproj",
         "packagesPath": "C:\\Users\\hevto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Application\\obj\\",
+        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -130,8 +133,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj": {
-                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj"
+              "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj": {
+                "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj"
               }
             }
           }
@@ -140,11 +143,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -171,6 +169,14 @@
               "target": "Package",
               "version": "[2023.12.6, )"
             },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.31.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[135.0.7049.9500, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
@@ -192,18 +198,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj": {
+    "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj",
         "projectName": "Finanzia.Domain",
-        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj",
+        "projectPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj",
         "packagesPath": "C:\\Users\\hevto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\obj\\",
+        "outputPath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -231,11 +237,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -257,6 +258,14 @@
             "QuestPDF": {
               "target": "Package",
               "version": "[2023.12.6, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.31.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[135.0.7049.9500, )"
             }
           },
           "imports": [
@@ -275,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

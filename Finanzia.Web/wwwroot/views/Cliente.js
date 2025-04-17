@@ -205,15 +205,16 @@ $("#tbData tbody").on("click", ".btn-eliminar", function () {
                     } else {
                         Swal.fire({
                             title: "Error!",
-                            text: "No se pudo eliminar.",
+                            text: responseJson.data, // ✅ muestra el mensaje real
                             icon: "error"
                         });
                     }
+
                 })
                 .catch(() => {
                     Swal.fire({
                         title: "Error!",
-                        text: "No se pudo eliminar.",
+                        text: responseJson.data || "No se pudo eliminar.",
                         icon: "error"
                     });
                 });

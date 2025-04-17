@@ -1,10 +1,12 @@
+use DBPrestamo
 -- Table: Cliente
 INSERT INTO Cliente (NroDocumento, Nombre, Apellido, Correo, Telefono, FechaCreacion) VALUES
-('111-22-3333', 'Jay', 'Bryant', 'rushashley@gmail.com', '809-555-1234', '2021-11-15 17:28:12'),
-('222-33-4444', 'Dillon', 'Carlson', 'foxscott@gmail.com', '829-555-5678', '2020-11-26 01:26:50'),
-('333-44-5555', 'Marissa', 'Taylor', 'jamesshaw@davis.com', '849-555-9101', '2022-03-18 06:14:23'),
-('444-55-6666', 'James', 'Brown', 'wjohns@barry.com', '849-555-1212', '2022-05-08 23:19:49'),
-('555-66-7777', 'Daniel', 'Schneider', 'sullivankristen@morgan.com', '829-555-1313', '2020-07-11 23:17:40');
+('111-1234567-3', 'Jay', 'Bryant', 'rushashley@gmail.com', '809-555-1234', '2021-11-15 17:28:12'),
+('222-3344556-4', 'Dillon', 'Carlson', 'foxscott@gmail.com', '829-555-5678', '2020-11-26 01:26:50'),
+('333-4455667-5', 'Marissa', 'Taylor', 'jamesshaw@davis.com', '849-555-9101', '2022-03-18 06:14:23'),
+('444-5566778-6', 'James', 'Brown', 'wjohns@barry.com', '849-555-1212', '2022-05-08 23:19:49'),
+('555-6677889-7', 'Daniel', 'Schneider', 'sullivankristen@morgan.com', '829-555-1313', '2020-07-11 23:17:40'),
+('666-7788990-8', 'Elena', 'Ramírez', 'elena.ramirez@example.com', '809-555-1414', '2023-01-10 10:45:00');
 
 -- Table: Moneda
 INSERT INTO Moneda (Nombre, Simbolo, FechaCreacion) VALUES

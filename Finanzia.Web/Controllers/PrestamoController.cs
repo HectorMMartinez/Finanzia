@@ -40,8 +40,17 @@ namespace Finanzia.Web.Controllers
         {
             var response = await _httpClient.PostAsJsonAsync("Prestamo", prestamoDto);
             var resultado = await response.Content.ReadAsStringAsync();
-            return Json(new { data = resultado });
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Json(new { data = resultado == "OK" ? "" : resultado });
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, new { data = resultado });
+            }
         }
+
 
         [HttpGet]
         public async Task<IActionResult> ObtenerPrestamos(int IdPrestamo, string NroDocumento)

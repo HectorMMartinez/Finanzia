@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t2j4uJGV7WY=",
+  "dgSpecHash": "7NiOqFc3MG9inC6qdhFm3BBF9GvxMaH93EYFY/nDNB8ZQ6Em7gkIcq+KSRBIoVipnio5NXpJ+FTDQOLkHhl+LA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Domain\\Finanzia.Domain.csproj",
+  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Domain\\Finanzia.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hevto\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\harfbuzzsharp\\7.3.0.1\\harfbuzzsharp.7.3.0.1.nupkg.sha512",
@@ -17,6 +17,8 @@
     "C:\\Users\\hevto\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.0.3\\microsoft.identitymodel.tokens.7.0.3.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\questpdf\\2023.12.6\\questpdf.2023.12.6.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver\\4.31.0\\selenium.webdriver.4.31.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver.chromedriver\\135.0.7049.9500\\selenium.webdriver.chromedriver.135.0.7049.9500.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp\\2.88.7\\skiasharp.2.88.7.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.7\\skiasharp.harfbuzz.2.88.7.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.7\\skiasharp.nativeassets.macos.2.88.7.nupkg.sha512",

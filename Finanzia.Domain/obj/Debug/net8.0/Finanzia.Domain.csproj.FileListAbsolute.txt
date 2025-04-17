@@ -10,3 +10,19 @@ C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Domain\obj\Debug\net8.0\Fina
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Domain\obj\Debug\net8.0\refint\Finanzia.Domain.dll
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.pdb
 C:\Users\hevto\Downloads\Finanzia\Finanzia\Finanzia.Domain\obj\Debug\net8.0\ref\Finanzia.Domain.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\Finanzia.Domain.deps.json
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\Finanzia.Domain.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\bin\Debug\net8.0\Finanzia.Domain.pdb
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.csproj.AssemblyReference.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.AssemblyInfoInputs.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.AssemblyInfo.cs
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.sourcelink.json
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\refint\Finanzia.Domain.dll
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\Finanzia.Domain.pdb
+C:\Users\hevto\OneDrive\Escritorio\Clases\Programacion II\App\Finanzia.Domain\obj\Debug\net8.0\ref\Finanzia.Domain.dll

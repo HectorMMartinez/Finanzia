@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "6bC6psgrv46OTKaA9mQPGAGelFtQlmHcfLAE1Ko7c38YfJNG/0FJEmcjZGpgbq86mf+xWgkemVoIlIIA928IMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Tests\\Finanzia.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hevto\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.support\\4.31.0\\selenium.support.4.31.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver\\4.31.0\\selenium.webdriver.4.31.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver.chromedriver\\135.0.7049.9500\\selenium.webdriver.chromedriver.135.0.7049.9500.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

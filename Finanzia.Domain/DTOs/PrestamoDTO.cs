@@ -39,7 +39,7 @@ namespace Finanzia.Domain.DTOs
         [Required]
         public string Estado { get; set; } = null!;
 
-        public List<PrestamoDetalleDTO> PrestamoDetalle { get; set; } = new();
+        public List<PrestamoDetalleDTO>? PrestamoDetalle { get; set; } = new();
         public DateTime FechaCreacion { get; set; }
     }
 }

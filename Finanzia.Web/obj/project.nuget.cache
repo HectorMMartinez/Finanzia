@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tU42DFjBuY4=",
+  "dgSpecHash": "IlEpNmFZQ6/X4WZ39sIy1V/w/dCj2/g7GZZ32CXls7C7Ve26HRD9FHC/JaRA0hSqoDjaZ9y6sab6oLwwuwEwdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia\\Finanzia\\Finanzia.Web\\Finanzia.Web.csproj",
+  "projectFilePath": "C:\\Users\\hevto\\OneDrive\\Escritorio\\Clases\\Programacion II\\App\\Finanzia.Web\\Finanzia.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hevto\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\harfbuzzsharp\\7.3.0.1\\harfbuzzsharp.7.3.0.1.nupkg.sha512",
@@ -47,6 +47,8 @@
     "C:\\Users\\hevto\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver\\4.31.0\\selenium.webdriver.4.31.0.nupkg.sha512",
+    "C:\\Users\\hevto\\.nuget\\packages\\selenium.webdriver.chromedriver\\135.0.7049.9500\\selenium.webdriver.chromedriver.135.0.7049.9500.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp\\2.88.7\\skiasharp.2.88.7.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.7\\skiasharp.harfbuzz.2.88.7.nupkg.sha512",
     "C:\\Users\\hevto\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.7\\skiasharp.nativeassets.macos.2.88.7.nupkg.sha512",
